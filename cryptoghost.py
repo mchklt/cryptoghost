@@ -85,5 +85,5 @@ def script():
                 except:
                     print(green + "\n[+]Found : " + red+ base64.b32decode(hashtxt).decode('ascii') + "\n\n")
     except IndexError:
-        print(Banner + "\n python3 cryptoghost.py -h [text]\n python3 cryptoghost.py -d [hash]\n\n")
+        print(Banner + "\n python3 cryptoghost.py -e [text]\n python3 cryptoghost.py -d [hash]\n\n")
 script()
