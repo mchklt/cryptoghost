@@ -20,7 +20,7 @@ def script():
         #
         #                By:\033[91mAbdelkarim Mouchquelita \n\n"""
         text = sys.argv[2].encode("utf-8")
-        if sys.argv[1] == "-h":
+        if sys.argv[1] == "-e":
             print(Banner)
             try:
                 print(green + '''
