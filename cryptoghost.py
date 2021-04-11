@@ -79,6 +79,34 @@ def script():
                         break
                     else:
                         print("Hash Not Found !")
+            elif len(hashtxt) == int(40):
+                headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+                url = 'https://hashtoolkit.com/decrypt-hash/?hash='
+                es = requests.get(url + hashtxt, headers = headers).text
+                soup = BeautifulSoup(es, 'html.parser')
+                s = soup.find_all('code')
+                print(green + "[+] Hash Found: " + red + s[1].text + "\n\n")
+            elif len(hashtxt) == int(64):
+                headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+                url = 'https://hashtoolkit.com/decrypt-sha256-hash/'
+                es = requests.get(url + hashtxt, headers = headers).text
+                soup = BeautifulSoup(es, 'html.parser')
+                s = soup.find_all('code')
+                print(green + "[+] Hash Found: " + red + s[1].text + "\n\n")
+            elif len(hashtxt) == int(96):
+                headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+                url = 'https://hashtoolkit.com/decrypt-sha384-hash/'
+                es = requests.get(url + hashtxt, headers = headers).text
+                soup = BeautifulSoup(es, 'html.parser')
+                s = soup.find_all('code')
+                print(green + "[+] Hash Found: " + red + s[1].text + "\n\n")
+            elif len(hashtxt) == int(128):
+                headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+                url = 'https://hashtoolkit.com/decrypt-sha512-hash/'
+                es = requests.get(url + hashtxt, headers = headers).text
+                soup = BeautifulSoup(es, 'html.parser')
+                s = soup.find_all('code')
+                print(green + "[+] Hash Found: " + red + s[1].text + "\n\n")
             else:
                 try:
                     print(green + "\n[+]Found : " + red + base64.b64decode(hashtxt).decode('ascii') + "\n\n")
