@@ -7,6 +7,6 @@ Methode 2, he tak a userhash input and decrypted in site named hashtoolkit .
 Thats all
 # how to use it 
 ### For ENCRYPTION && ENCODING
-#### python3 cryptoghost.py -e [TEXT]
+==> python3 cryptoghost.py -e [TEXT]
 ### For DECRYPTION && DECODING
-#### python3 cryptoghost.pt -d [HASH]
+==> python3 cryptoghost.pt -d [HASH]
