@@ -68,6 +68,9 @@ def script():
                 for text in lis_t:
                     if hash(text) == hashtxt :
                         print(green + "[+] Hash Found: " + red + text + "\n\n")
+                        with open("decrypted.txt", 'a') as f:
+                            f.write(f"{hashtxt}:{text}    ----- MD5 -----\n")
+                        print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
                         break
                     elif hash(text) != hashtxt:
                         headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
@@ -76,7 +79,10 @@ def script():
                         soup = BeautifulSoup(es, 'html.parser')
                         s = soup.find_all('code')
                         print(green + "[+] Hash Found: " + red + s[1].text + "\n\n")
-                        break
+                        with open("decrypted.txt", 'a') as f:
+                            f.write(f"{hashtxt}:{s[1].text}    ----- MD5 -----\n")
+                        print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
+                        break 
                     else:
                         print("Hash Not Found !")
             elif len(hashtxt) == int(40):
@@ -86,6 +92,9 @@ def script():
                 soup = BeautifulSoup(es, 'html.parser')
                 s = soup.find_all('code')
                 print(green + "[+] Hash Found: " + red + s[1].text + "\n\n")
+                with open("decrypted.txt", 'a') as f:
+                    f.write(f"{hashtxt}:{s[1].text}\n")
+                print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
             elif len(hashtxt) == int(64):
                 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
                 url = 'https://hashtoolkit.com/decrypt-sha256-hash/'
@@ -93,6 +102,9 @@ def script():
                 soup = BeautifulSoup(es, 'html.parser')
                 s = soup.find_all('code')
                 print(green + "[+] Hash Found: " + red + s[1].text + "\n\n")
+                with open("decrypted.txt", 'a') as f:
+                    f.write(f"{hashtxt}:{s[1].text}\n")
+                print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
             elif len(hashtxt) == int(96):
                 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
                 url = 'https://hashtoolkit.com/decrypt-sha384-hash/'
@@ -100,6 +112,9 @@ def script():
                 soup = BeautifulSoup(es, 'html.parser')
                 s = soup.find_all('code')
                 print(green + "[+] Hash Found: " + red + s[1].text + "\n\n")
+                with open("decrypted.txt", 'a') as f:
+                    f.write(f"{hashtxt}:{s[1].text}\n")
+                print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
             elif len(hashtxt) == int(128):
                 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
                 url = 'https://hashtoolkit.com/decrypt-sha512-hash/'
@@ -107,11 +122,20 @@ def script():
                 soup = BeautifulSoup(es, 'html.parser')
                 s = soup.find_all('code')
                 print(green + "[+] Hash Found: " + red + s[1].text + "\n\n")
+                with open("decrypted.txt", 'a') as f:
+                    f.write(f"{hashtxt}:{s[1].text}\n")
+                print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
             else:
                 try:
                     print(green + "\n[+]Found : " + red + base64.b64decode(hashtxt).decode('ascii') + "\n\n")
+                    with open("decrypted.txt", 'a') as f:
+                        f.write(f"{hashtxt}:{base64.b64decode(hashtxt).decode('ascii')}   ----- BASE32 -----\n")
+                    print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
                 except:
                     print(green + "\n[+]Found : " + red+ base64.b32decode(hashtxt).decode('ascii') + "\n\n")
+                    with open("decrypted.txt", 'a') as f:
+                        f.write(f"{hashtxt}:{base64.b32decode(hashtxt).decode('ascii')}   ----- BASE64 -----\n")
+                    print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
     except IndexError:
         print(Banner + "\n python3 cryptoghost.py -e [text]\n python3 cryptoghost.py -d [hash]\n\n")
 script()
