@@ -6,7 +6,7 @@ Methode 1 , bruteforce i give 100k words and passwords list for script and he tr
 Methode 2, he tak a userhash input and decrypted in site named hashtoolkit .
 Thats all
 # how to use cryptoghost 
-### For ENCRYPTION && ENCODING
+==For ENCRYPTION && ENCODING==
 ==> python3 cryptoghost.py -e [TEXT]
 ### For DECRYPTION && DECODING
 ==> python3 cryptoghost.pt -d [HASH]
