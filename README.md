@@ -7,10 +7,16 @@ Methode 2, he tak a userhash input and decrypted in site named hashtoolkit .
 Thats all
 # how to use cryptoghost 
 **For ENCRYPTION && ENCODING**
+
 ==> python3 cryptoghost.py -e [TEXT]
+
 **For DECRYPTION && DECODING**
+
 ==> python3 cryptoghost.pt -d [HASH]
+
 **For Decryption with url of wordlist**
+
 ==> python3 cryptoghost.py -d [HASH] -u [WORDLIST_URL]
+
 ##example:
   python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -u https://pastebin.com/wordlist.txt
