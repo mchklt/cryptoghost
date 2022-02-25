@@ -30,6 +30,8 @@ python3 cryptoghost.py
 #### ==> python3 cryptoghost.py -d [HASH] -u [WORDLIST_URL]
 
 ## examples
-  python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -u https://pastebin.com/MoroccanRockyou.txt \n
-  python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -w /usr/share/wordlists/MoroccanRockyou.txt \n
+  python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -u https://pastebin.com/MoroccanRockyou.txt 
+  
+  python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -w /usr/share/wordlists/MoroccanRockyou.txt 
+  
   python3 cryptoghost.py -e MCHKLT
