@@ -30,8 +30,12 @@ python3 cryptoghost.py
 #### ==> python3 cryptoghost.py -d [HASH] -u [WORDLIST_URL]
 
 ## examples
-  python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -u https://raw.githubusercontent.com/Edd13Mora/MoroccanRockyou/main/MoroccanRockyou.txt 
+  python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -u https://example.com/wordlist.txt 
   
   python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -w /usr/share/wordlists/MoroccanRockyou.txt 
   
   python3 cryptoghost.py -e MCHKLT
+## wordlists
+[MoroccanRockyou] https://raw.githubusercontent.com/Edd13Mora/MoroccanRockyou/main/MoroccanRockyou.txt
+[10-million-pass] https://raw.githubusercontent.com/mchklt/SecLists/master/Passwords/xato-net-10-million-passwords-1000000.txt
+[bt4-pass] https://raw.githubusercontent.com/mchklt/SecLists/master/Passwords/bt4-password.txt
