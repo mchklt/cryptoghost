@@ -11,21 +11,23 @@ keep cracking <3
 ## Installation
 ```bash
 git clone https://github.com/mchklt/cryptoghost.git
+
 cd cryptoghost
-python3 ccryptoghost.py
+
+python3 cryptoghost.py
 ```
 # how to use cryptoghost 
 **For ENCRYPTION && ENCODING**
 
-==> python3 cryptoghost.py -e [TEXT]
+### ==> python3 cryptoghost.py -e [TEXT]
 
 **For DECRYPTION && DECODING**
 
-==> python3 cryptoghost.pt -d [HASH]
+### ==> python3 cryptoghost.pt -d [HASH]
 
 **For Decryption with url of wordlist**
 
-==> python3 cryptoghost.py -d [HASH] -u [WORDLIST_URL]
+### ==> python3 cryptoghost.py -d [HASH] -u [WORDLIST_URL]
 
 ##example:
   python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -u https://pastebin.com/wordlist.txt
