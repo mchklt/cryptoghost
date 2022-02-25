@@ -36,6 +36,6 @@ python3 cryptoghost.py
   
   python3 cryptoghost.py -e MCHKLT
 ## wordlists
-[MoroccanRockyou] https://raw.githubusercontent.com/Edd13Mora/MoroccanRockyou/main/MoroccanRockyou.txt
-[10-million-pass] https://raw.githubusercontent.com/mchklt/SecLists/master/Passwords/xato-net-10-million-passwords-1000000.txt
-[bt4-pass] https://raw.githubusercontent.com/mchklt/SecLists/master/Passwords/bt4-password.txt
+[MoroccanRockyou] (https://raw.githubusercontent.com/Edd13Mora/MoroccanRockyou/main/MoroccanRockyou.txt) 
+[10-million-pass] (https://raw.githubusercontent.com/mchklt/SecLists/master/Passwords/xato-net-10-million-passwords-1000000.txt) 
+[bt4-pass] (https://raw.githubusercontent.com/mchklt/SecLists/master/Passwords/bt4-password.txt) 
