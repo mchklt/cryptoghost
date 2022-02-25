@@ -1,5 +1,4 @@
 import hashlib
-import os
 import requests
 import base64
 import platform 
@@ -77,11 +76,12 @@ def script():
                 except:
                     pass
                 try:
+                    def hash(txt):
+                        return hashlib.md5(txt.encode("utf-8")).hexdigest()
                     check = lambda: True if sys.argv[3] == "-u" else False
+                    wordlst_check = lambda: True if sys.argv[3] == "-w" else False
                     if check():
                         lis_t = requests.get(sys.argv[4]).text.split("\n")
-                        def hash(txt):
-                            return hashlib.md5(txt.encode("utf-8")).hexdigest()
                         for text in lis_t:
                             if hash(text) == hashtxt :
                                 print(green + "[+] Hash Found: " + red + text + "\n\n")
@@ -89,6 +89,16 @@ def script():
                                     f.write(f"{hashtxt}:{text}    ----- MD5 -----\n")
                                 print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
                                 break
+                    if wordlst_check():
+                        wordlst = open(f"{sys.argv[4]}", 'r')
+                        wordlst = wordlst.readlines()
+                        for text in wordlst:
+                            if hash(text) == hashtxt:
+                                    print(green + "[+] Hash Found: " + red + text + "\n\n")
+                                    with open("decrypted.txt", 'a') as f:
+                                        f.write(f"{hashtxt}:{text}    ----- MD5 -----\n")
+                                    print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
+                                    break
                 except:
                     pass
             elif len(hashtxt) == int(40):
@@ -143,5 +153,5 @@ def script():
                         f.write(f"{hashtxt}:{base64.b32decode(hashtxt).decode('ascii')}   ----- BASE64 -----\n")
                     print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
     except:
-        print(endc+Banner + "\n python3 cryptoghost.py -e [TEXT]\n python3 cryptoghost.py -d [HASH]\n python3 cryptoghost.py -d [HASH] -u [WORDLIST_URL]\n" + blue + "example:\n" + green + " python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -u https://pastebin.com/wordlist.txt\n")
+        print(endc+Banner + "\n python3 cryptoghost.py -e [TEXT]\n python3 cryptoghost.py -d [HASH]\n python3 cryptoghost.py -d [HASH] -u [WORDLIST_URL]\n" + blue + "example:\n" + green + " python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -u https://pastebin.com/wordlist.txt or /path/wordlist.txt\n")
 script()
