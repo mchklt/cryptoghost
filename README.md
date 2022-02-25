@@ -1,4 +1,5 @@
 # cryptoghost
+# returns 'decryption, encryption'
 Cryptoghost is a python script created by three important librarys (requests, hashlib, beautifulsoup from bs4) 
 cryptoghost supports decryption / encryption / encoding / decoding .
 The decryption is important in cryptoghost i make tow methods for decryption :
