@@ -153,5 +153,5 @@ def script():
                         f.write(f"{hashtxt}:{base64.b32decode(hashtxt).decode('ascii')}   ----- BASE64 -----\n")
                     print(green + "The result saved in decrypted.txt , enjoy<3\n@MCHKLT")
     except:
-        print(endc+Banner + "\n python3 cryptoghost.py -e [TEXT]\n python3 cryptoghost.py -d [HASH]\n python3 cryptoghost.py -d [HASH] -u [WORDLIST_URL]\n" + blue + "example:\n" + green + " python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -u https://pastebin.com/wordlist.txt or /path/wordlist.txt\n")
+        print(endc+Banner + "\n python3 cryptoghost.py -e [TEXT]\n python3 cryptoghost.py -d [HASH]\n python3 cryptoghost.py -d [HASH] -u [WORDLIST_URL]\n" + blue + "example:\n" + green + " python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -u https://pastebin.com/wordlist.txt\n python3 cryptoghost.py -d ddcdfbdd755fe5fec76466e4f881d0b6 -w /usr/share/wordlists/MoroccanRockyou.txt\n")
 script()
